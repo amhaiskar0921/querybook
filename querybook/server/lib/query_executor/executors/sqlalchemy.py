@@ -8,7 +8,7 @@ from lib.query_executor.base_executor import QueryExecutorBaseClass
 from lib.query_executor.clients.sqlalchemy import SqlAlchemyClient
 from lib.query_executor.executor_template.templates import sqlalchemy_template
 from lib.query_executor.utils import get_parsed_syntax_error
-
+import goku_sql_client.db
 
 class SqlAlchemyQueryExecutor(QueryExecutorBaseClass):
     @classmethod
@@ -61,6 +61,7 @@ SQLALCHEMY_SUPPORTED_DIALECTS = [
     "elasticsearch",
     "exa",
     "firebird",
+    "gokuql",
     "gsheets",
     "hana",
     "hive",
